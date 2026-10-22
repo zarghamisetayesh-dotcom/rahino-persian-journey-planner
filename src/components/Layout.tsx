@@ -54,7 +54,6 @@ export function Layout({ children }: { children: ReactNode }) {
             {nav.slice(1).map((n) => <Link key={n.to} to={n.to} className="hover:underline">{n.label}</Link>)}
           </div>
         </div>
-        <div className="text-center text-xs opacity-70 pb-6">وب‌سایت نمایشی — بدون پرداخت و صدور بلیت واقعی</div>
       </footer>
     </div>
   );
