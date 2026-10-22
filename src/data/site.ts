@@ -1,4 +1,3 @@
-// همه متن‌ها، تصاویر و قیمت‌های نمونه سایت از اینجا قابل ویرایش هستند.
 import hero from "@/assets/hero.jpg";
 import coast from "@/assets/dest-coast.jpg";
 import desert from "@/assets/dest-desert.jpg";

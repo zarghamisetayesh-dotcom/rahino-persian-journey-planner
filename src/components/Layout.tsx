@@ -16,7 +16,6 @@ export function Layout({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="bg-gold text-primary text-center text-xs py-2 px-4 font-medium">{site.demoNotice}</div>
       <header className="sticky top-0 z-40 bg-card/90 backdrop-blur border-b">
         <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
           <Link to="/" className="text-2xl font-black text-primary">
