@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Rahino Persian Journey Planner
+
+Create a beautiful, professional Persian travel booking website named "Rahino". Use a modern RTL design, premium travel photography, a clean white and deep navy color palette, and responsive mobile-friendly layouts. Include a homepage, destination cards, train and flight search forms, hotel listings, sample prices, a booking inquiry form, an about page, and contact information. Use fictional sample destinations and clearly label all sample prices and bookings as demo content. Do not process real payments or generate fake tickets or payment confirmations. Make all text, images, destination cards, and sample prices easy to edit through the project editor. All navigation and demo interactions should work.
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://rahino-persian-journey-planner.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/999ed725-a74e-506f-870e-59897b5c0bfb).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
