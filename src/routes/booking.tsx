@@ -12,7 +12,7 @@ const schema = z.object({
 });
 
 export const Route = createFileRoute("/booking")({
-  validateSearch: (s: Record<string, unknown>) => ({ item: typeof s.item === "string" ? s.item : undefined }),
+  validateSearch: (s: Record<string, unknown>): { item?: string } => (typeof s["item"] === "string" ? { item: s["item"] } : {}),
   head: () => ({
     meta: [
       { title: "درخواست رزرو | راهینو" },

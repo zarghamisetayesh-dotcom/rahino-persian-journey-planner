@@ -6,8 +6,8 @@ type Mode = "train" | "flight";
 
 export function TripSearch() {
   const [mode, setMode] = useState<Mode>("flight");
-  const [from, setFrom] = useState(cities[0]);
-  const [to, setTo] = useState(cities[1]);
+  const [from, setFrom] = useState<string>(cities[0]!);
+  const [to, setTo] = useState<string>(cities[1]!);
   const [date, setDate] = useState("");
   const [pax, setPax] = useState(1);
   const [results, setResults] = useState<null | { from: string; to: string }>(null);
