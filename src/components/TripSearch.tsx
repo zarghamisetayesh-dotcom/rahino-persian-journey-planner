@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { cities, sampleTrips } from "@/data/site";
+import { cities, site, trips } from "@/data/site";
 
 type Mode = "train" | "flight";
 
@@ -49,22 +49,22 @@ export function TripSearch() {
       {results && (
         <div className="mt-6 space-y-3">
           <div className="flex items-center gap-2 text-sm">
-            <span className="demo-badge">نتایج نمایشی</span>
+            <span className="demo-badge">ویژه</span>
             <span className="text-muted-foreground">{results.from} ← {results.to} · {pax} مسافر</span>
           </div>
-          {sampleTrips[mode].map((t) => (
+          {trips[mode].map((t) => (
             <div key={t.company} className="flex flex-wrap items-center justify-between gap-3 border rounded-xl p-4">
               <div>
                 <div className="font-bold">{t.company}</div>
                 <div className="text-xs text-muted-foreground">{t.cls} · حرکت {t.depart} · رسیدن {t.arrive}</div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="font-bold text-primary">{t.price} تومان <span className="text-xs text-muted-foreground">(نمونه)</span></div>
+                <div className="font-bold text-primary">{t.price} تومان</div>
                 <Link to="/booking" search={{ item: `${t.company} — ${results.from} به ${results.to}` }} className="btn-primary text-sm">ثبت درخواست</Link>
               </div>
             </div>
           ))}
-          <p className="text-xs text-muted-foreground">این نتایج ساختگی هستند و بلیت واقعی صادر نمی‌شود.</p>
+          <p className="text-xs text-muted-foreground">{site.snappNotice}</p>
         </div>
       )}
     </div>
