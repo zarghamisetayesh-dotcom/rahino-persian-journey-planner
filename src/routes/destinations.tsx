@@ -7,14 +7,14 @@ export const Route = createFileRoute("/destinations")({
   head: () => ({
     meta: [
       { title: "مقصدها | راهینو" },
-      { name: "description", content: "مقصدهای نمونه راهینو با قیمت‌های نمایشی." },
+      { name: "description", content: "تورهای کویر، رشت، مشهد، ساحل قشم و کیش با راهینو." },
       { property: "og:title", content: "مقصدها | راهینو" },
-      { property: "og:description", content: "ساحل، کویر، کوه و جنگل — مقصدهای نمونه." },
+      { property: "og:description", content: "کویر، رشت، مشهد، ساحل قشم و کیش." },
     ],
   }),
   component: () => (
     <Layout>
-      <PageHeader title="مقصدها" subtitle="همه مقصدها و قیمت‌ها نمونه و خیالی هستند." />
+      <PageHeader title="مقصدها" subtitle={site.snappNotice} />
       <div className="mx-auto max-w-6xl px-4 mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {destinations.map((d) => <DestinationCard key={d.id} d={d} />)}
       </div>

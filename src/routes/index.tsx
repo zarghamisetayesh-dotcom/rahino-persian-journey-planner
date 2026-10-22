@@ -8,9 +8,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "راهینو | رزرو سفر، قطار، پرواز و هتل" },
-      { name: "description", content: "راهینو؛ وب‌سایت نمایشی رزرو سفر با جستجوی قطار و پرواز، مقصدها و هتل‌های نمونه." },
+      { name: "description", content: "راهینو؛ رزرو تور و اقامتگاه به کویر، رشت، مشهد، قشم و کیش. رزرو نقد و اقساط از طریق اپلیکیشن اسنپ." },
       { property: "og:title", content: "راهینو | رزرو سفر" },
-      { property: "og:description", content: "جستجوی قطار، پرواز و هتل در یک تجربه آرام و زیبا (نسخه نمایشی)." },
+      { property: "og:description", content: "تور و اقامتگاه نقد و اقساط از طریق اپلیکیشن اسنپ." },
     ],
   }),
   component: Index,
@@ -24,7 +24,7 @@ function Index() {
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative mx-auto max-w-6xl px-4 h-full flex flex-col justify-center text-primary-foreground">
           <h1 className="text-4xl md:text-6xl font-black leading-tight max-w-2xl">{site.tagline}</h1>
-          <p className="mt-4 text-lg opacity-90 max-w-xl">قطار، پرواز و هتل را در یک جا جستجو کنید.</p>
+          <p className="mt-4 text-lg opacity-90 max-w-xl">قطار، پرواز و هتل را در یک جا جستجو کنید. {site.snappNotice}</p>
           <div className="mt-6"><Link to="/destinations" className="btn-gold">کشف مقصدها</Link></div>
         </div>
       </section>
@@ -35,7 +35,7 @@ function Index() {
           <h2 className="text-3xl font-black">مقصدهای محبوب</h2>
           <Link to="/destinations" className="text-sm text-primary font-semibold">همه ←</Link>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {destinations.map((d) => <DestinationCard key={d.id} d={d} />)}
         </div>
       </section>

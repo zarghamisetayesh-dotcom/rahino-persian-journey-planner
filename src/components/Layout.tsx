@@ -16,6 +16,7 @@ export function Layout({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="min-h-screen flex flex-col">
+      <div className="bg-gold text-primary text-center text-sm font-bold px-4 py-2">{site.snappNotice}</div>
       <header className="sticky top-0 z-40 bg-card/90 backdrop-blur border-b">
         <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
           <Link to="/" className="text-2xl font-black text-primary">
@@ -46,9 +47,9 @@ export function Layout({ children }: { children: ReactNode }) {
             <p className="opacity-80">{site.tagline}</p>
           </div>
           <div className="space-y-1 opacity-90">
-            <div>تلفن: {site.contact.phone}</div>
-            <div>ایمیل: {site.contact.email}</div>
+            <div>تلفن پشتیبانی تورها: <a href={site.contact.phoneHref} dir="ltr" className="hover:underline">{site.contact.phone}</a></div>
             <div>{site.contact.address}</div>
+            <div className="pt-2 font-bold">{site.snappNotice}</div>
           </div>
           <div className="flex flex-col gap-1 opacity-90">
             {nav.slice(1).map((n) => <Link key={n.to} to={n.to} className="hover:underline">{n.label}</Link>)}
