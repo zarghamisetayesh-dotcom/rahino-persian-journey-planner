@@ -1,0 +1,28 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Layout, PageHeader } from "@/components/Layout";
+import { site } from "@/data/site";
+
+export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title: "تماس با ما | راهینو" },
+      { name: "description", content: "اطلاعات تماس نمونه راهینو." },
+      { property: "og:title", content: "تماس با راهینو" },
+      { property: "og:description", content: "تلفن، ایمیل و آدرس راهینو." },
+    ],
+  }),
+  component: () => (
+    <Layout>
+      <PageHeader title="تماس با ما" subtitle="اطلاعات زیر نمونه هستند." />
+      <div className="mx-auto max-w-6xl px-4 mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {[["تلفن", site.contact.phone], ["ایمیل", site.contact.email], ["آدرس", site.contact.address], ["ساعات کاری", site.contact.hours]].map(([t, v]) => (
+          <div key={t} className="bg-card border rounded-2xl p-6 shadow-soft">
+            <div className="text-xs text-muted-foreground">{t}</div>
+            <div className="font-bold mt-2 break-words">{v}</div>
+          </div>
+        ))}
+      </div>
+      <div className="text-center mt-12"><Link to="/booking" className="btn-primary">ثبت درخواست سفر</Link></div>
+    </Layout>
+  ),
+});
